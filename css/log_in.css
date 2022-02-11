@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import 'style.css';
-
+.footer--style-none {
+  display: none;
+}
 .logIn-header__inner {
   display: flex;
   justify-content: center;
@@ -14,7 +16,7 @@
 }
 
 .logIn-mainBanner__title {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-bottom: 20px;
   font-size: 30px;
   line-height: 1em;
@@ -24,17 +26,18 @@
   background-color: var(--header-bk-color);
 }
 .logIn-input__box {
-  margin: 0 30px 40px 30px;
+  margin: 0 30px;
 }
 .logIn-input__box form {
   display: flex;
+  max-width: 500px;
+  margin: 0 auto;
   flex-direction: column;
   align-items: center;
 }
 .logIn-input__box input[type='text'],
 .logIn-input__box input[type='password'] {
   width: 100%;
-  max-width: 560px;
   margin-bottom: 10px;
   padding: 30px 20px 8px 8px;
   border-bottom: 1px solid #e9e9e9;
@@ -47,6 +50,7 @@
 }
 .logIn-input__check-box {
   align-self: flex-start;
+  margin-bottom: 50px;
 }
 input[type='checkbox'] {
   display: none;
@@ -54,6 +58,7 @@ input[type='checkbox'] {
 input[type='checkbox'] + label {
   cursor: pointer;
   font-size: 13px;
+  font-weight: 300;
 }
 input[type='checkbox'] + label:before {
   content: '';
@@ -76,6 +81,107 @@ input[type='checkbox']:checked + label:before {
   font-size: 13px;
   text-align: center;
 }
-.footer--style-none {
-  display: none;
+.logIn-input__login-btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.logIn-input__login-btn input[type='button'] {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+.logIn-input__find-box {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 0 30px 80px 30px;
+}
+.logIn-input__fbox-inner {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.logIn-input__find {
+  display: flex;
+  justify-content: flex-end;
+}
+.logIn-input__find a {
+  display: inline-block;
+  font-weight: 300;
+  color: #777;
+  font-size: 13px;
+}
+.logIn-input__find-line {
+  margin: 4px 4px 0 4px;
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #999;
+}
+.logIn-input__mk-new {
+  text-align: end;
+  margin-bottom: 30px;
+}
+.logIn-input__mk-new a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: underline;
+}
+.logIn-input__kakao {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #ffcd4e;
+  text-align: center;
+}
+.logIn-input__kakao span {
+  display: inline-block;
+  padding: 15px 0 15px 35px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  background-image: url(../img/kakao-ic.png);
+  background-size: 30px auto;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.logIn-footer--style {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.logIn-footer__utill {
+  width: 80%;
+  margin: 0 auto 10px auto;
+}
+.logIn-footer__utill ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.logIn-footer__utill li:not(:last-child) {
+  margin-right: 15px;
+}
+.logIn-footer__utill a {
+  display: inline-block;
+  color: #777;
+  font-size: 13px;
+  font-weight: 300;
+}
+.logIn-footer__font--bold a {
+  font-weight: 700;
+}
+.logIn-footer__copyright {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 300;
+  color: #777;
 }

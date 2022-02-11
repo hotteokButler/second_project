@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/log_in.css" />
-    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/index_media.css" />
   </head>
   <body>
     <div id="wrap" class="wrap">
@@ -47,19 +47,27 @@
             </form>
           </div>
           <!-- .logIn-input__box -->
-          <div class="logIn-input__find">
-            <p class="logIn-input__find-id">
-              <a href="">이메일 주소 찾기</a>
-            </p>
-            <p class="logIn-input__find-pwd">
-              <a href="">비밀번호 찾기</a>
-            </p>
-            <p class="logIn-input__mk-new">
-              <a href="">계정 생성</a>
-            </p>
+          <div class="logIn-input__find-box">
+            <div class="logIn-input__fbox-inner">
+              <div class="logIn-input__find">
+                <p class="logIn-input__find-id">
+                  <a href="">이메일 주소 찾기</a>
+                </p>
+                <span class="logIn-input__find-line"></span>
+                <p class="logIn-input__find-pwd">
+                  <a href="">비밀번호 찾기</a>
+                </p>
+              </div>
+              <!-- .logIn-input__find 계정 찾기-->
+              <p class="logIn-input__mk-new">
+                <a href="">계정 생성</a>
+              </p>
+              <button class="logIn-input__kakao">
+                <span>카카오 간편 로그인</span>
+              </button>
+            </div>
           </div>
           <!-- .logIn-input__find -->
-          <button class="logIn-input__kakao">카카오 간편 로그인</button>
         </section>
       </main>
       <!-- #container -->
@@ -67,7 +75,7 @@
         <div class="logIn-footer__utill">
           <ul>
             <li><a href="">웹사이트 판매약관</a></li>
-            <li><a href="">개인정보처리방침</a></li>
+            <li class="logIn-footer__font--bold"><a href="">개인정보처리방침</a></li>
             <li><a href="">공지사항</a></li>
             <li><a href="">고객센터</a></li>
           </ul>
