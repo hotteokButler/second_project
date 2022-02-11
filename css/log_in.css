@@ -1,0 +1,81 @@
+@charset "utf-8";
+@import 'style.css';
+
+.logIn-header__inner {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  margin: 0;
+  background-color: var(--header-bk-color);
+}
+
+.logIn-header__inner > .logo a {
+  margin: 0;
+}
+
+.logIn-mainBanner__title {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 1em;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  background-color: var(--header-bk-color);
+}
+.logIn-input__box {
+  margin: 0 30px 40px 30px;
+}
+.logIn-input__box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logIn-input__box input[type='text'],
+.logIn-input__box input[type='password'] {
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 10px;
+  padding: 30px 20px 8px 8px;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 13px;
+}
+.logIn-input__box input[type='text']::placeholder,
+.logIn-input__box input[type='password']::placeholder {
+  color: #c2c2c2;
+  font-size: 14px;
+}
+.logIn-input__check-box {
+  align-self: flex-start;
+}
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox'] + label {
+  cursor: pointer;
+  font-size: 13px;
+}
+input[type='checkbox'] + label:before {
+  content: '';
+  display: inline-block;
+  margin: 2px 4px 0 0;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  border: 1px solid #c2c2c2;
+  border-radius: 2px;
+  vertical-align: top;
+}
+input[type='checkbox']:checked + label:before {
+  content: '';
+  border: 1px solid transparent;
+  background-color: var(--main-color-green);
+  background-image: url(../img/checkbox-check-ic.svg);
+  background-size: 12px auto;
+  background-position: center;
+  font-size: 13px;
+  text-align: center;
+}
+.footer--style-none {
+  display: none;
+}
