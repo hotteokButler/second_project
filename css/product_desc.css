@@ -392,3 +392,9 @@ button.product-desc__btnList--active::after {
 .product-notice__list li > div {
   display: none;
 }
+
+/* 제품상세 media query */
+
+/* 테블릿 width: 768px */
+@media (min-width: 768px) {
+}
