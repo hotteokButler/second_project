@@ -70,19 +70,19 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: ();
+  background-color: var(--header-bk-color);
   z-index: 222;
 }
 .gnb__top {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin: 20px 20px 70px 20px;
+  margin: 15px 20px 70px 20px;
 }
 .gnb__logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   width: 70px;
   height: 26px;
   background-image: url(../img/dyson-logo-w1.png);
@@ -152,7 +152,7 @@
   display: flex;
 }
 .main-slid__tag li {
-  margin: 0 6px 8px 0;
+  margin: 0 6px 10px 0;
 }
 .main-slid__tag a {
   display: inline-block;
@@ -437,12 +437,15 @@
   margin: 0 2px;
   border-radius: 8px;
   text-indent: -99999px;
-  background-color: var(--main-color-green);
+  background-color: #ccc;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px auto;
   transform: 200ms;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+}
+p.community__btn-active {
+  background-color: var(--main-color-green);
 }
 .community__perv {
   background-image: url(../img/slide-arr-l-w.png);
@@ -495,9 +498,9 @@
 .quick-box {
   position: fixed;
   bottom: 15px;
-  right: 15px;
-  width: 30px;
-  height: 80px;
+  right: 20px;
+  width: 40px;
+  height: 90px;
   padding: 10px;
   z-index: 9999999;
   transition: 500ms;
@@ -517,8 +520,8 @@
   flex-direction: column;
 }
 .quick-box__inner p {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-size: 100% auto;
   filter: drop-shadow(3px 2px 5px rgba(0, 0, 0, 0.25));
   cursor: pointer;
@@ -590,8 +593,8 @@
   margin-top: 4px;
 }
 .footer_other-country li {
-  width: 50px;
-  padding: 6px 0 0 2px;
+  width: 54px;
+  padding: 6px 0 0 5px;
   background-color: #cecece;
   color: #222;
   font-size: 12px;

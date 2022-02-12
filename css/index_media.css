@@ -26,16 +26,14 @@
     top: 0;
     left: auto;
     right: 0;
-    background-color: #222;
+    background-color: var(--header-bk-color);
     z-index: 999;
   }
   .gnb__top {
-    margin: 20px 30px 100px 30px;
+    margin: 25px 30px 80px 30px;
   }
   .gnb__logo {
-    left: 30px;
-    width: 80px;
-    height: 30px;
+    opacity: 0;
   }
   .gnb__cart a,
   .gnb__closeBtn {
@@ -676,12 +674,12 @@
   .quick-box {
     bottom: 40px;
     right: 40px;
-    width: 50px;
-    height: 130px;
+    width: 55px;
+    height: 140px;
   }
   .quick-box__inner p {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     background-size: 100% auto;
     filter: drop-shadow(3px 2px 5px rgba(0, 0, 0, 0.25));
     text-indent: -99999px;
@@ -691,7 +689,7 @@
     position: relative;
     padding: 50px 100px;
     color: #fff;
-    background-color: #222;
+    background-color: var(--header-bk-color);
   }
   .footer__inner {
     max-width: 1440px;

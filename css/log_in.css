@@ -1,8 +1,12 @@
 @charset "utf-8";
 @import 'style.css';
+@import 'index_media.css';
+
 .footer--style-none {
   display: none;
 }
+
+/* header */
 .logIn-header__inner {
   display: flex;
   justify-content: center;
@@ -14,6 +18,7 @@
 .logIn-header__inner > .logo a {
   margin: 0;
 }
+/* section1 logIn-mainBanner */
 
 .logIn-mainBanner__title {
   margin-bottom: 30px;
@@ -25,6 +30,8 @@
   font-weight: 700;
   background-color: var(--header-bk-color);
 }
+
+/* section2 logIn-input*/
 .logIn-input__box {
   margin: 0 30px;
 }
@@ -172,7 +179,6 @@ input[type='checkbox']:checked + label:before {
 .logIn-footer__utill a {
   display: inline-block;
   color: #777;
-  font-size: 13px;
   font-weight: 300;
 }
 .logIn-footer__font--bold a {
@@ -184,4 +190,84 @@ input[type='checkbox']:checked + label:before {
   text-align: center;
   font-weight: 300;
   color: #777;
+}
+
+/* log_in.html : @media-quary */
+
+@media (min-width: 768px) {
+  /* 테블릿 header */
+  .logIn-header__inner {
+    padding: 30px 0;
+  }
+
+  .logIn-header__inner > .logo a {
+    width: 100px;
+    height: 37px;
+  }
+  /* 테블릿 본문1 logIn-mainBanner */
+  .logIn-mainBanner__title {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    font-size: 42px;
+  }
+  /* 테블릿 본문2  logIn-input */
+  .logIn-input__find-box {
+    margin: 0 30px 110px 30px;
+  }
+  .logIn-input__box input[type='text'],
+  .logIn-input__box input[type='password'] {
+    padding: 40px 20px 8px 8px;
+    font-size: 15px;
+  }
+  .logIn-input__check-box {
+    margin-bottom: 70px;
+  }
+  .input[type='checkbox'] + label {
+    font-size: 14px;
+  }
+  .logIn-input__login-btn input[type='button'] {
+    padding: 20px 0;
+    font-size: 24px;
+  }
+  .logIn-input__kakao span {
+    padding: 20px 0 20px 35px;
+    font-size: 24px;
+  }
+}
+/* 테블릿 마지막 */
+
+/* log_in.html pc:1200px */
+@media (min-width: 1200px) {
+  /* pc section logIn-input */
+  .logIn-input__find a {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .logIn-input__find-box {
+    margin: 0 30px 110px 30px;
+  }
+  .logIn-input__mk-new {
+    margin-bottom: 50px;
+  }
+  .logIn-input__box input[type='text'],
+  .logIn-input__box input[type='password'],
+  .logIn-input__box input[type='text']::placeholder,
+  .logIn-input__box input[type='password']::placeholder {
+    font-size: 17px;
+  }
+
+  .logIn-input__check-box {
+    margin-bottom: 100px;
+  }
+  .input[type='checkbox'] + label {
+    font-size: 15px;
+  }
+
+  /* pc footer */
+  .logIn-footer--style {
+    display: none;
+  }
+  .footer--style-none {
+    display: block;
+  }
 }

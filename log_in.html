@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/log_in.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index_media.css" />
   </head>
   <body>
@@ -26,9 +26,11 @@
       <main id="container">
         <section class="logIn-mainBanner">
           <div class="logIn-mainBanner__inner">
-            <figure>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/login-bn.jpg" />
+              <source media="(min-width: 768px)" srcset="img/log-in-banner.png" />
               <img src="img/log-in-banner.png" alt="로그인 배너" />
-            </figure>
+            </picture>
             <h2 class="logIn-mainBanner__title">다이슨 회원 로그인</h2>
           </div>
         </section>
@@ -157,5 +159,7 @@
     </div>
     <!--#wrap-->
     <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
