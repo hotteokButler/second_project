@@ -10,7 +10,7 @@
 .logIn-header__inner {
   display: flex;
   justify-content: center;
-  padding: 15px 0;
+  padding: 20px 0;
   margin: 0;
   background-color: var(--header-bk-color);
 }
