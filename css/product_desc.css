@@ -870,12 +870,11 @@ button.product-desc__btnList--active::after {
     border-bottom: 1px solid #efefef;
   }
   .product-desc__btnList {
-    text-align: center;
-    max-width: 980px;
+    max-width: 1440px;
     margin: 0 auto;
   }
   .product-desc__btnList button {
-    margin: 0 60px 0;
+    margin: 0 60px 0 0;
     padding: 25px 8px;
     font-size: 20px;
   }
@@ -888,7 +887,7 @@ button.product-desc__btnList--active::after {
     font-weight: 500;
   }
   .desc-card {
-    max-width: 980px;
+    max-width: 1440px;
     margin: 0 auto 150px;
   }
   .product-desc {
