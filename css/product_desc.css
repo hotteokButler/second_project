@@ -867,7 +867,7 @@ button.product-desc__btnList--active::after {
     margin: 0 auto;
   }
   .product-desc__btnList button {
-    margin: 0 50px 0;
+    margin: 0 60px 0;
     padding: 25px 8px;
     font-size: 20px;
   }
