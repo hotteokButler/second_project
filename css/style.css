@@ -79,11 +79,19 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+<<<<<<< HEAD
   margin: 22px 20px 70px 20px;
 }
 .gnb__logo {
   position: absolute;
   top: 20px;
+=======
+  margin: 15px 20px 70px 20px;
+}
+.gnb__logo {
+  position: absolute;
+  top: 15px;
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
   left: 15px;
   width: 70px;
   height: 26px;

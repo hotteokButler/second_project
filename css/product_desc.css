@@ -123,7 +123,10 @@
 }
 .product-info__sub-img,
 .product-info__pop-up,
+<<<<<<< HEAD
 .product-info__pc-buy,
+=======
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
 .product-info__pc-buy {
   display: none;
 }
@@ -133,7 +136,11 @@
   border-radius: 4px;
 }
 .product-info__buy-box--bk-gray {
+<<<<<<< HEAD
   background-color: rgba(239, 239, 239, 0.5);
+=======
+  background-color: #f7f7f7;
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
 }
 .product-info__mo-count,
 .product-info__mo-all,
@@ -172,12 +179,18 @@
 .product-info__mo-minus {
   background-image: url(../img/minus.svg);
   text-indent: -99999px;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
 }
 .product-info__mo-plus {
   background-image: url(../img/plus.svg);
   text-indent: -99999px;
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
 }
 .product-info__mo-all {
   margin: 0 0 20px 0;
@@ -292,7 +305,11 @@
   padding: 18px 15px 15px 15px;
 }
 .other-product > .community__btn {
+<<<<<<< HEAD
   left: 35px;
+=======
+  left: 0;
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
   bottom: 0;
 }
 /* 본문3 product-desc */
@@ -341,7 +358,11 @@ button.product-desc__btnList--active::after {
 .porduct-notice h2 {
   margin: 0 0 15px 15px;
   font-size: 24px;
+<<<<<<< HEAD
   font-weight: 500px;
+=======
+  font-weight: 500x;
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
 }
 .product-notice__list {
   margin: 0 15px 50px;
@@ -488,6 +509,7 @@ button.product-desc__btnList--active::after {
   }
 
   /* 테블릿 본문2 .other-product */
+<<<<<<< HEAD
   .other-product {
     margin: 0 35px 70px 35px;
   }
@@ -915,3 +937,7 @@ button.product-desc__btnList--active::after {
   }
 }
 /* pc width: 1200px 마지막*/
+=======
+}
+/* 테블릿 width: 768px 마지막*/
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b

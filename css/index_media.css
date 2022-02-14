@@ -616,9 +616,12 @@
   .community__btn {
     display: none;
   }
+<<<<<<< HEAD
   .couunity__btn--active {
     display: flex;
   }
+=======
+>>>>>>> eaab62dcbeddfbbf8c5cb6998620a253d5755e3b
   .community__guide {
     display: block;
     position: absolute;
