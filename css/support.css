@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 50px;
 }
 .support-search__box h2 {
   margin: 0 0 20px;
@@ -65,4 +64,83 @@
 }
 .support-search__input input::selection {
   color: var(--main-color-green);
+}
+.support-list {
+  margin: 0 15px;
+}
+.support-list ul {
+  padding: 80px 0;
+}
+.support-list li {
+  margin: 0 0 20px;
+  padding: 0 0 0 60px;
+  line-height: 50px;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px auto;
+}
+.support-list li span {
+  display: block;
+  margin: -10px 0 0;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 300;
+}
+.support-list__li01 {
+  background-image: url(../img/garentee-ic.png);
+}
+.support-list__li02 {
+  background-image: url(../img/replace-p-ic.png);
+}
+.support-list__li03 {
+  background-image: url(../img/fix-ic.png);
+}
+.support-list__li04 {
+  background-image: url(../img/support-ic.png);
+}
+
+/* 본문3 support-menu */
+.support-menu {
+  margin: 0 15px 50px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+.support-menu__quick {
+  display: flex;
+  max-width: 530px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+}
+.support-menu__quick p {
+  width: calc(45% - 20px);
+  padding: 100px 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  background-position: center top 10px;
+  background-size: 75px auto;
+  background-repeat: no-repeat;
+}
+.support-menu__quick p:nth-child(1),
+.support-menu__quick p:nth-child(2) {
+  margin-bottom: 30px;
+}
+.support-menu__quickRegister,
+.support-menu__quickProduct {
+  margin: 0 20px 0 0;
+}
+.support-menu__quickRegister {
+  background-image: url(../img/register-ic.png);
+}
+.support-menu__quickCheck {
+  background-image: url(../img/check-order-ic.png);
+}
+.support-menu__quickProduct {
+  background-image: url(../img/apply-ic.png);
+}
+.support-menu__quickSurvice {
+  background-image: url(../img/serv-center-ic.png);
 }
