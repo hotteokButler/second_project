@@ -293,9 +293,10 @@
   padding: 18px 15px 15px 15px;
 }
 .other-product > .community__btn {
-  left: 35px;
+  left: 0;
   bottom: 0;
 }
+
 /* 본문3 product-desc */
 .product-desc__btnList {
   margin: 0 15px;
@@ -338,7 +339,203 @@ button.product-desc__btnList--active::after {
   margin: 0 0 50px 0;
 }
 
-/* 본문4 porduct-notice */
+/* 본문3 제품상세__제품사양 .product-detailFunction */
+.product-detailFunction__inner {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.product-detailFunction__title {
+  margin: 0 0 30px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1em;
+}
+.product-detailFunction__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 10px;
+}
+.product-detailFunction__list li {
+  width: calc(50% - 20px);
+  padding: 0;
+  margin: 0 0 25px;
+  border-bottom: 1px solid #ccc;
+  color: #424242;
+}
+.product-detailFunction__list li:not(:nth-child(2n)) {
+  margin-right: 10px;
+}
+.product-detailFunction__txt {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.product-detailFunction__subTxt {
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 1em;
+  font-weight: 300;
+}
+.product-detailFunction__img {
+  width: 300px;
+  height: 250px;
+  margin: 0 auto 50px auto;
+  text-indent: -99999px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/detail-function-bk.png);
+  background-size: 100% auto;
+}
+
+/* 본문4 .prodcut-review  */
+.product-reviews {
+  margin: 0 15px 50px;
+}
+.product-reviews h2 {
+  margin: 0 0 30px;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 500;
+}
+.product-review__average {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 15px;
+  border: 2px solid #efefef;
+  border-radius: 2px;
+  text-align: center;
+  color: #323232;
+}
+.product-review__average::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: -8px;
+  left: 49%;
+  background-color: #fff;
+  border-left: 2px solid #efefef;
+  border-bottom: 2px solid #efefef;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+}
+.porduct-review__num {
+  display: inline-block;
+  width: 150px;
+  height: 60px;
+  padding: 0 0 0 65px;
+  margin: 0 auto 10px;
+  background-image: url(../img/star-bk.svg);
+  background-size: 55px auto;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+.porduct-review__num span {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 60px;
+  font-weight: 500;
+}
+.product-review__sub {
+  margin: 0 0 15px;
+  font-size: 15px;
+  color: #777;
+}
+.product-review__howMany {
+  display: inline-block;
+  margin: 0 4px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.product-review__writeReview {
+  padding: 15px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 2px;
+  background-color: var(--main-color-green);
+}
+.product-review__cardList {
+  color: #777;
+}
+.product-review__cardList > ul {
+  height: 355px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  color: #222;
+  overflow: hidden;
+}
+.product-review__cardList > ul > li:not(:last-child) {
+  border-bottom: 1px solid #efefef;
+}
+.product-review__cardList > ul > li {
+  padding: 10px 5px;
+}
+
+.product-review__star {
+  margin: 0 0 5px;
+}
+.product-review__cardTitle {
+  font-size: 17px;
+  font-weight: 500;
+  color: #777;
+}
+.product-info__personInfo {
+  margin: 0 0 10px;
+}
+.product-info__personName {
+  font-size: 15px;
+  font-weight: 500;
+}
+.product-info__reviewContent {
+  width: 100%;
+  margin: 0 0 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-weight: 300;
+}
+
+.product-info__btnAndDate button {
+  padding: 0 0 0 14px;
+  margin: 0 5px 0 0;
+  background-position: left center;
+  background-size: auto 12px;
+  background-repeat: no-repeat;
+  font-size: 13px;
+  color: #777;
+}
+.product-info__btnAndDate {
+  display: flex;
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  color: #ccc;
+}
+.product-info__likeBtn {
+  background-image: url(../img/tumb-up-ico-g.png);
+}
+.product-info__dislikeBtn {
+  background-image: url(../img/tumb-down-ico-g.png);
+}
+.product-info__likeBtn.product-info__btn--active {
+  background-image: url(../img/tumb-up-ico.png);
+}
+.product-info__dislikeBtn.product-info__btn--active {
+  background-image: url(../img/tumb-down-ico.png);
+}
+.product-review__moreView {
+  font-size: 15px;
+  color: #777;
+  font-weight: 500;
+  text-decoration: underline;
+}
+/* 본문5 porduct-notice */
 .porduct-notice h2 {
   margin: 0 0 15px 15px;
   font-size: 24px;
@@ -396,11 +593,6 @@ button.product-desc__btnList--active::after {
   text-decoration: underline;
 }
 .product-notice__list li > div {
-  display: none;
-}
-
-/* 제품상세 */
-.product-detailFunction {
   display: none;
 }
 
@@ -528,6 +720,86 @@ button.product-desc__btnList--active::after {
   .desc-card {
     margin: 0 0 70px 0;
   }
+  /* 테블릿 본문3__product-detailFuction */
+  .product-detailFunction__inner {
+    margin: 0 35px;
+    padding: 0;
+  }
+
+  .product-detailFunction__title {
+    font-size: 32px;
+  }
+  .product-detailFunction__list li {
+    width: calc(50% - 30px);
+  }
+  .product-detailFunction__list li:not(:nth-child(2n)) {
+    margin-right: 15px;
+  }
+  .product-detailFunction__txt {
+    margin: 0 0 20px;
+    font-size: 16px;
+  }
+  .product-detailFunction__subTxt {
+    margin: 0 0 15px;
+    font-size: 18px;
+  }
+  .product-detailFunction__img {
+    width: 500px;
+    height: 450px;
+    margin: 0 auto 70px auto;
+  }
+
+  /* 테블릿 본문3__product-review */
+  .product-reviews {
+    margin: 0 35px 70px;
+  }
+  .product-reviews h2 {
+    margin: 0 0 35px;
+    font-size: 30px;
+  }
+  .product-review__average {
+    margin: 0 auto 60px;
+    padding: 30px 15px;
+    width: 70%;
+  }
+  .product-review__average::after {
+    width: 15px;
+    height: 15px;
+    bottom: -10px;
+  }
+  .product-review__writeReview {
+    padding: 15px 30px;
+  }
+
+  .product-review__cardList > ul {
+    height: 660px;
+    padding: 25px 20px;
+    margin-bottom: 15px;
+  }
+  .product-review__cardList > ul > li {
+    padding: 25px 0;
+  }
+  .product-review__star {
+    margin: 0 0 10px;
+  }
+  .product-info__personInfo {
+    margin: 0 0 15px;
+    font-size: 15px;
+  }
+  .product-info__personName {
+    font-size: 17px;
+  }
+  .product-info__btnAndDate button {
+    padding: 0 0 0 20px;
+    margin: 0 10px 0 0;
+    background-size: auto 16px;
+    font-size: 13px;
+    color: #777;
+  }
+  .product-info__btnAndDate {
+    display: flex;
+    margin: 0 0 0 8px;
+  }
   /* 테블릿 본문4 porduct-notice */
   .porduct-notice h2 {
     margin: 0 0 25px 35px;
@@ -599,7 +871,7 @@ button.product-desc__btnList--active::after {
     top: 55%;
   }
   .product-info__main-img {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     background: linear-gradient(to bottom, #efefef 1%, #ffff);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   }
@@ -832,7 +1104,7 @@ button.product-desc__btnList--active::after {
   }
   .product-info__benefitTitle {
     margin: 0 0 60px 0;
-    font-size: 34px;
+    font-size: 40px;
   }
   /* pc .other-product */
   .other-product {
@@ -842,7 +1114,7 @@ button.product-desc__btnList--active::after {
   }
   .other-product__title {
     margin: 0 0 60px 0;
-    font-size: 34px;
+    font-size: 40px;
   }
   .other-product__list {
     overflow: hidden;
@@ -859,11 +1131,15 @@ button.product-desc__btnList--active::after {
     font-size: 18px;
     line-height: 1.5em;
   }
+  .other-product > .community__btn {
+    padding-left: 35px;
+  }
   .community__btn p {
     width: 40px;
     height: 40px;
     cursor: pointer;
   }
+
   /* pc본문3 .product-desc */
   .product-dsec__btnInner {
     border-top: 1px solid #efefef;
@@ -894,6 +1170,132 @@ button.product-desc__btnList--active::after {
     margin: 0 0 150px 0;
   }
 
+  /* pc-product-detailFunction */
+  .product-detailFunction__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 75px;
+  }
+  .product-detailFunction__title {
+    margin: 0 0 60px;
+    font-size: 40px;
+  }
+  .product-detailFunction__list {
+    justify-content: flex-start;
+    margin: 0 0 40px;
+  }
+  .product-detailFunction__list li {
+    width: calc(33.33% - 40px);
+    padding: 0 20px;
+    margin: 0 0 30px;
+  }
+  .product-detailFunction__list li:not(:nth-child(3n)) {
+    margin-right: 40px;
+  }
+  .product-detailFunction__txt {
+    margin: 0 0 30px;
+    font-size: 18px;
+  }
+  .product-detailFunction__subTxt {
+    margin: 0 0 20px;
+    font-size: 22px;
+  }
+  .product-detailFunction__img {
+    width: 60%;
+    height: 600px;
+    margin: 0 auto 40px auto;
+  }
+  /* pc .product-reviews */
+  .product-reviews {
+    max-width: 1440px;
+    margin: 0 auto 150px;
+    padding: 0 35px;
+  }
+
+  .product-reviews h2 {
+    font-size: 40px;
+    padding: 0 0 0 45px;
+    margin: 0 0 60px;
+  }
+  .product-review__cardList {
+    padding: 0 35px;
+  }
+  .product-review__average {
+    margin: 0 auto 90px;
+    padding: 50px 15px;
+    width: 40%;
+  }
+  .product-review__average::after {
+    width: 15px;
+    height: 15px;
+    bottom: -10px;
+  }
+  .porduct-review__num {
+    width: 190px;
+    height: 70px;
+    padding: 0 0 0 75px;
+    margin: 0 auto 20px;
+    background-size: 65px auto;
+  }
+  .porduct-review__num span {
+    font-size: 45px;
+    line-height: 70px;
+    font-weight: 700;
+  }
+  .product-review__howMany {
+    display: inline-block;
+    margin: 0 2px 0;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .product-review__sub {
+    font-size: 18px;
+  }
+  .product-review__writeReview {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
+  .product-review__cardList > ul {
+    height: 800px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+  .product-review__cardList > ul > li {
+    padding: 35px 10px;
+  }
+  .product-review__star {
+    margin: 0 0 15px;
+  }
+  .product-review__cardTitle {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+  .product-info__personInfo {
+    font-size: 18px;
+  }
+  .product-info__personName {
+    font-size: 20px;
+  }
+  .product-info__reviewContent {
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  .product-info__btnAndDate button {
+    padding: 0 0 0 25px;
+    margin: 0 15px 0 0;
+    background-size: auto 18px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #777;
+  }
+  .product-info__btnAndDate {
+    display: flex;
+    margin: 0 0 0 8px;
+  }
+  .product-review__moreView {
+    padding: 0 35px;
+    font-size: 20px;
+  }
   /* pc.porduct-notice */
   .porduct-notice {
     max-width: 1440px;
@@ -907,7 +1309,7 @@ button.product-desc__btnList--active::after {
     max-width: 1440px;
     margin: 0 auto 60px auto;
     padding: 0 0 0 45px;
-    font-size: 34px;
+    font-size: 40px;
     line-height: 1em;
     font-weight: 500;
   }
@@ -921,54 +1323,8 @@ button.product-desc__btnList--active::after {
   .product-notice__descMore {
     font-size: 15px;
   }
-  /* pc-product-detailFunction */
-  .product-detailFunction {
-    display: block;
-  }
-  .product-detailFunction__inner {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 75px;
-  }
-  .product-detailFunction__title {
-    margin: 0 0 60px;
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1em;
-  }
-  .product-detailFunction__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 0 40px;
-  }
-  .product-detailFunction__list li {
-    width: calc(33.33% - 40px);
-    padding: 0 20px;
-    margin: 0 0 30px;
-    border-bottom: 1px solid #ccc;
-    color: #424242;
-  }
-  .product-detailFunction__list li:not(:nth-child(3n)) {
-    margin-right: 40px;
-  }
-  .product-detailFunction__txt {
-    margin: 0 0 30px;
+  .notice__mail {
     font-size: 18px;
-    font-weight: 500;
-  }
-  .product-detailFunction__subTxt {
-    margin: 0 0 20px;
-    font-size: 22px;
-    line-height: 1em;
-    font-weight: 300;
-  }
-  .product-detailFunction__img {
-    width: 60%;
-    height: 600px;
-    margin: 0 auto 40px auto;
-    text-indent: -99999px;
-    background-image: url(../img/detail-function-bk.png);
-    background-size: 100% auto;
   }
 }
 /* pc width: 1200px 마지막*/

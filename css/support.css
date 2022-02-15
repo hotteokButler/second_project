@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import 'style.css';
+
+/* 고객지원 */
+
+/* 본문1 .support-banner */
+.support-banner {
+  margin: 0 0 50px;
+  padding: 25px 15px;
+  background-color: var(--header-bk-color);
+}
+.support-banner picture {
+  margin: 0 0 20px;
+}
+.support-banner__title,
+.support-banner__subTxt {
+  color: #fff;
+}
+.support-banner__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1em;
+  font-weight: 700;
+}
+.support-banner__subTxt {
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+}
+
+/* 본문2 .support-search */
+.support-search__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 50px;
+}
+.support-search__box h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.support-search__input {
+  margin: 0 auto;
+  padding: 0 30px 0 0;
+  width: 80%;
+  max-width: 360px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 300px;
+  background-size: auto 25px;
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  background-image: url(../img/search-ic-g.png);
+}
+.support-search__input input {
+  width: 100%;
+  padding: 0 20px;
+  line-height: 45px;
+  font-size: 15px;
+}
+.support-search__input input::placeholder {
+  color: #ccc;
+  font-size: 15px;
+}
+.support-search__input input::selection {
+  color: var(--main-color-green);
+}

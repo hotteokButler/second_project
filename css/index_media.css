@@ -218,6 +218,9 @@
     margin-top: 20px;
     margin-left: 20px;
   }
+  .gnb {
+    display: none;
+  }
   .gnb-pc {
     display: block;
     align-self: flex-end;
@@ -563,6 +566,7 @@
     border-radius: 50%;
     background-color: #efefef;
     text-indent: -99999px;
+    cursor: pointer;
   }
   .info-card__pager--color-green {
     background-color: #79b927;
@@ -648,6 +652,7 @@
   .community__bk-img:nth-child(2) {
     transform: scaleX(-1);
   }
+
   /* pc- consider */
   .consider {
     max-width: 1600;
@@ -676,6 +681,7 @@
     margin-bottom: 100px;
     font-size: 18px;
   }
+
   /* pc quick-box */
   .quick-box {
     bottom: 40px;
