@@ -22,7 +22,7 @@
     display: none;
     position: absolute;
     width: 500px;
-    height: 200vh;
+    height: 100vh;
     top: 0;
     left: auto;
     right: 0;
@@ -49,6 +49,9 @@
   }
   .gnb__list li a {
     font-size: 20px;
+  }
+  #container.container--margin-top {
+    margin: 70px 0 0 0;
   }
   /* 테블릿 main-slid */
 
@@ -245,9 +248,9 @@
     height: 55px;
     font-size: 16px;
   }
-  .gnb-pc > ul > li > a {
+  /* .gnb-pc > ul > li > a {
     transition: 200ms linear;
-  }
+  } */
   .gnb-pc--color-green > ul > li:hover > a {
     color: #79b927;
   }
@@ -255,18 +258,17 @@
     font-weight: 500;
     font-size: 18px;
   }
-  .gnb-pc--bk-gray > ul > li:first-child:hover {
+  /* .gnb-pc--bk-gray > ul > li:first-child:hover {
     border-radius: 10px 10px 0 0;
     background-color: #fff;
-  }
+  } */
   .gnb-pc__depth2 {
     display: none;
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: -500px;
     right: -500px;
-    height: 0;
-    padding: 0 525px;
+    padding: 50px 525px;
     flex-wrap: wrap;
     background-color: #fff;
     background-image: url(../img/depth2-bk.png);
@@ -304,10 +306,10 @@
     text-decoration: underline;
     font-weight: 500;
   }
-  .gnb-pc > ul > li:hover > div {
+  /* .gnb-pc > ul > li:hover > div {
     display: flex;
     animation: dropMenu 0.25s linear forwards;
-  }
+  } */
 
   @keyframes dropMenu {
     0% {
@@ -366,6 +368,9 @@
     background-image: url(../img/menu-ic-g.png);
   }
 
+  #container.container--margin-top {
+    margin: 90px 0 0 0;
+  }
   /* pc-main slid */
   .main-slid {
     position: relative;
