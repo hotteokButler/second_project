@@ -8,8 +8,9 @@ const moMenuCloseBtn = $('.gnb__closeBtn');
 moMenuBtn.on({
   click: function () {
     moMenu.slideUp();
+    moMenu.hide();
     if (windowWidth >= 320) {
-      moMenu.slideDown(600);
+      moMenu.slideDown(500);
     }
     if (windowWidth >= 768) {
       moMenu
@@ -29,7 +30,7 @@ moMenuBtn.on({
 moMenuCloseBtn.on({
   click: function () {
     if (windowWidth >= 320) {
-      moMenu.slideUp(600);
+      moMenu.slideUp(500);
     }
     if (windowWidth >= 768) {
       moMenu
@@ -40,7 +41,8 @@ moMenuCloseBtn.on({
         .stop()
         .animate({
           right: '-100%',
-        });
+        })
+        .hide(600);
     }
     return false;
   },

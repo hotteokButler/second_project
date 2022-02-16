@@ -205,7 +205,7 @@
 @media (min-width: 1200px) {
   /* pc header */
   .header {
-    background-color: #222;
+    background-color: var(--header-bk-color);
   }
   .header__inner {
     max-width: 1440px;
