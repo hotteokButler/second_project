@@ -38,6 +38,7 @@
   margin: 0 0 20px;
   font-size: 24px;
   font-weight: 500;
+  line-height: 1em;
 }
 .support-search__input {
   margin: 0 auto;
@@ -143,4 +144,122 @@
 }
 .support-menu__quickSurvice {
   background-image: url(../img/serv-center-ic.png);
+}
+
+/* 본문4 support-inquiry */
+
+.support-inquiry h2 {
+  margin: 0 15px 20px;
+  font-size: 24px;
+  line-height: 1em;
+  font-weight: 500;
+}
+.support-inquiry__box li {
+  padding: 20px 15px 20px 100px;
+  background-size: 50px auto;
+  background-repeat: no-repeat;
+  background-position: left 25px center;
+}
+.support-inquiry__box li:not(:nth-child(2)) {
+  background-color: #efefef;
+}
+.support-inquiry__sub {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.support-inquiry__txt {
+  color: #444;
+  font-weight: 300;
+}
+.support-inquiry__inTxt {
+  display: block;
+  margin: 0 0 5px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.support-inquiry__box .support-inquiry__call {
+  background-image: url(../img/ask-tel.png);
+}
+.support-inquiry__box .support-inquiry__kakao {
+  background-image: url(../img/kakao-ic.png);
+}
+.support-inquiry__box .support-inquiry__mail {
+  background-image: url(../img/mail-ic.png);
+}
+
+/* support-page.html media-quary */
+
+/* 테블릿 768px */
+@media (min-width: 768px) {
+  /* 테블릿 .support-banner */
+  .support-banner {
+    margin: 0 0 70px;
+    padding: 45px 35px;
+  }
+  .support-banner__title {
+    margin: 0 0 15px;
+    font-size: 42px;
+  }
+  .support-banner__subTxt {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+  /* 테블릿 .support-search */
+  .support-search__box h2 {
+    margin: 0 0 30px;
+    font-size: 30px;
+  }
+  .support-list {
+    margin: 0 35px;
+  }
+  .support-list ul {
+    padding: 100px 0 80px;
+  }
+  .support-list li {
+    padding: 0 0 0 80px;
+    line-height: 80px;
+    font-size: 20px;
+    background-size: 60px auto;
+  }
+  .support-list li span {
+    margin: -20px 0 0;
+    font-size: 15px;
+  }
+
+  /* 테블릿 본문3 .support-menu */
+  .support-menu {
+    margin: 0 35px 80px;
+  }
+  .support-menu__quick p {
+    width: calc(45% - 20px);
+    padding: 120px 25px 0;
+    font-size: 18px;
+    background-position: center top 20px;
+    background-size: 85px auto;
+  }
+  .support-menu__quick p:nth-child(1),
+  .support-menu__quick p:nth-child(2) {
+    margin-bottom: 40px;
+  }
+  /* 테블릿 본문4 support-inquiry */
+  .support-inquiry h2 {
+    margin: 0 35px 30px;
+    font-size: 30px;
+  }
+  .support-inquiry__box li {
+    padding: 30px 15px 30px 130px;
+    background-size: 60px auto;
+    background-position: left 35px center;
+  }
+  .support-inquiry__sub {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+  .support-inquiry__inTxt {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
 }
