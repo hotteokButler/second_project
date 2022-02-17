@@ -232,12 +232,15 @@
   background-repeat: no-repeat;
   background-position: left center;
   text-indent: -99999px;
+  transition: 0.4s opacity;
 }
 
 .main-slid__desc {
   width: 85%;
   margin-bottom: 14px;
+  transition: 0.4s opacity;
 }
+
 .main-slid__more {
   width: 30px;
   height: 30px;
@@ -250,7 +253,8 @@
 .main-slid__pc-pager {
   display: none;
 }
-.main-slid__pager {
+.main-slid__pager,
+.info-slid__pager {
   position: relative;
   max-width: 370px;
   width: 90%;
@@ -258,13 +262,15 @@
   background-color: #c0c0c0;
   margin: auto;
 }
-.main-slide__pager--move {
+.main-slide__pager--move,
+.info-slide__pager--move {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 0;
   height: 2px;
   background-color: var(--main-color-green);
+  transition: 800ms width;
 }
 /* 본문2 .quick-menu */
 .quick-menu__title {

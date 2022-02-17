@@ -35,7 +35,6 @@ const pagerFinishNum = document.querySelector('.main-slid__pager-end');
 //pc pager
 const pcPager = document.querySelector('.main-slid__move');
 const pcPagerBar = document.querySelector('.main-slid__move > p');
-const pcPagerWidth = pcPager.getBoundingClientRect().width;
 //mo,tablet pager
 const moPager = document.querySelector('.main-slid__pager');
 const moPagerBar = document.querySelector('.main-slide__pager--move');
@@ -72,13 +71,16 @@ pagerFinishNum.innerText = String(mainSlideImgAndTxt.length);
 function slideTxtSwitchOption(array, index) {
   slideTitle.style.backgroundImage = array[index].titleUrl;
   slideDesc.innerText = array[index].text;
-  pagerStartNum.innerText = array[index].id;
+
   if (window.innerWidth > 768) {
+    let pcPagerWidth = pcPager.getBoundingClientRect().width;
+
+    pagerStartNum.innerText = array[index].id;
     pcPagerBar.style.width = `${(pcPagerWidth / array.length) * (index + 1)}px`;
-    pcPagerBar.style.transition = '800ms width';
-  } else if (window.innerWidth <= 768) {
-    moPagerBar.style.width = `${(moPagerBar / array.length) * (index + 1)}px`;
-    moPagerBar.style.transition = '800ms width';
+  } else {
+    let moPagerWidth = moPager.getBoundingClientRect().width;
+
+    moPagerBar.style.width = `${(moPagerWidth / array.length) * (index + 1)}px`;
   }
 }
 
