@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Dyson</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=no" />
     <link rel="shortcut icon" href="img/dyson_favicon.ico" />
     <link rel="icon" href="img/dyson_favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -115,7 +115,7 @@
               <li class="menu-icon__ic04"><a href="log_in.html">login</a></li>
             </ul>
           </div>
-          <div class="gnb">
+          <div class="gnb ">
             <div class="gnb__top">
               <h2 class="gnb__logo">dyson</h2>
               <p class="gnb__ico">
@@ -143,9 +143,10 @@
       <main id="container">
         <section class="main-slid">
           <figure class="main-slid__img">
-            <a href="">
-              <img src="img/main-bn01.jpg" alt="다이슨 퓨리파이어 휴메디+cool 포름알데히드 소개" />
-            </a>
+            <img src="img/main-bn01.jpg" id="ms01" alt="다이슨 퓨리파이어 휴메디+cool 포름알데히드 소개" />
+            <img src="img/main-bn02.jpg" id="ms02" alt="다이슨 코랄™ 스타일 스트레이트너" />
+            <img src="img/main-bn03.jpg" id="ms03" alt="다이슨 슈퍼소닉 푸시아/아이언" />
+            <img src="img/main-bn04.jpg" id="ms04" alt="다이슨 라이트사이클 모프™ 조명 플로어스탠드형(블랙)" />
           </figure>
           <!--.main-slid__img-->
           <div class="main-slid__txt">
@@ -174,6 +175,7 @@
               <p class="main-slid__prev">이전으로</p>
               <p class="main-slid__next">다음으로</p>
               <p class="main-slid__pause">일시정지</p>
+              <p class="main-slid__play">다시재생</p>
             </div>
           </div>
           <!-- .main-slid__pc-pager -->
@@ -425,13 +427,14 @@
           <div class="footer__lang">
             <div class="footer__country">국가</div>
             <div class="footer__country-name">
-              <p class="footer_selected-name footer_selected-ko">한국</p>
+              <p class="footer_selected-name ">한국</p>
               <ul class="footer_other-country">
-                <li class="footer_selected-en">미국</li>
-                <li class="footer_selected-fr">프랑스</li>
-                <li class="footer_selected-jp">일본</li>
-                <li class="footer_selected-it">이탈리아</li>
-                <li class="footer_selected-ch">중국</li>
+                <li class="footer_selected-ko">한국</li>
+                <li class="footer_selected-en">호주</li>
+                <li class="footer_selected-fr">영국</li>
+                <li class="footer_selected-jp">이스라엘</li>
+                <li class="footer_selected-it">멕시코</li>
+                <li class="footer_selected-ch">공용어</li>
               </ul>
             </div>
           </div>
@@ -496,6 +499,7 @@
     <!--#wrap-->
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/index-html.js"></script>
