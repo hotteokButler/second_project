@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index_media.css" />
   </head>
@@ -186,7 +187,7 @@
           <div class="quick-menu__icon">
             <ul>
               <li>
-                <a href="">
+                <a href="v11_complete.html">
                   <p class="quick-menu__icon01">무선 청소기</p>
                   <p class="quick-menu__icon__txt">무선 청소기</p>
                 </a>
@@ -227,16 +228,32 @@
         <!--.quick-menu-->
         <section class="info">
           <div class="info-card info-card-product"  id="dyson-product-v11Complete">
-            <figure class="info-card__img">
-              <a href="v11_complete.html">
-                <img src="img/detect-slim-bn.jpg" alt="디텍트 슬림" class="info-card__pc-mo"/>
-                <img src="img/detect-slim-bn-pc.jpg" alt="디텍트 슬림" class="info-card__pc-img"/>
-                <div class="info-card__tag">다이슨 V12 detect slim</div>
-              </a>
-            </figure>
+            <div class="info-card__productImgWrap">
+              <figure class="info-card__img">
+                <a href="v11_complete.html" id="infoSlide01">
+                  <img src="img/detect-slim-bn.jpg" alt="디텍트 슬림" class="info-card__pc-mo"/>
+                  <img src="img/detect-slim-bn-pc.jpg" alt="디텍트 슬림" class="info-card__pc-img"/>
+                  <div class="info-card__tag" style="background-image : url(../img/v11-com-in-mainbn.png);">다이슨 V12 detect slim</div>
+                </a>
+              </figure>
+              <figure class="info-card__img">
+                <a href="" id="infoSlide02">
+                  <img src="img/dyson-fromaldehyde-hot-cool-bn02.jpg" alt="디텍트 슬림" class="info-card__pc-mo"/>
+                  <img src="img/dyson-fromaldehyde-hot-cool-bn02-pc.jpg" alt="디텍트 슬림" class="info-card__pc-img"/>
+                  <div class="info-card__tag" style="background-image : url(../img/dyson-fromaldehyde-hot-cool-n.png);" >다이슨 핫엔쿨 프롬알데히드 공기청정기</div>
+                </a>
+              </figure>
+              <figure class="info-card__img" >
+                <a href="" id="infoSlide03">
+                  <img src="img/dyson-cyclone-v10-bn03.jpg" alt="디텍트 슬림" class="info-card__pc-mo"/>
+                  <img src="img/dyson-cyclone-v10-bn03-pc.jpg" alt="디텍트 슬림" class="info-card__pc-img"/>
+                  <div class="info-card__tag" style="background-image : url(../img/dyson-cyclone-v10-n.png);">다이슨 사이클론 V10</div>
+                </a>
+              </figure>
+            </div>
             <div class="info-card__txt">
               <h2 class="info-card__title">당신의 상쾌한 <span>LIFE</span></h2>
-              <p class="info-card__desc">다이슨의 강력하고 가벼운 무선 청소기</p>
+              <p class="info-card__desc">다이슨의 다양한 제품들과 함께 여러분의 다이슨 라이프를 즐겨보세요</p>
             </div>
             <div class="info-card__btn">
               <button class="info-card__btn-green">구매하기</button>
@@ -246,13 +263,10 @@
               <p class="info-slide__pager--move"></p>
             </div>
             <div class="info-card__pc-pager">
-              <p class="info-card__pager info-card__pager--color-green">1</p>
-              <p class="info-card__pager">2</p>
-              <p class="info-card__pager">3</p>
             </div>
           </div>
           <!-- info-card1__제품홍보 -->
-          <div class="info-card">
+          <div class="info-card info-card-slide-up">
             <figure class="info-card__img">
               <a href="">
                 <img src="img/demo-store-vr.jpg" alt="데모스토어" class="info-card__pc-mo" />
@@ -268,7 +282,7 @@
             </div>
           </div>
           <!-- info-card2 다이슨 데모 스토어-->
-          <div class="info-card">
+          <div class="info-card info-card-slide-up">
             <figure class="info-card__img">
               <a href="">
                 <img src="img/dyson-lab.jpg" alt="다이슨 연구소" class="info-card__pc-mo"/>
@@ -284,7 +298,7 @@
             </div>
           </div>
           <!-- info-card3 다이슨연구소 -->
-          <div class="info-card">
+          <div class="info-card info-card-slide-up">
             <figure class="info-card__img">
               <a href="">
                 <img src="img/register-item.jpg" alt="제품등록" class="info-card__pc-mo" />
@@ -305,13 +319,13 @@
           <h2 class="community__main-title">다이슨 커뮤니티</h2>
           <div class="community__inner">
             <div class="community__bk-typo">
-              <div class="community__bk-img">
+              <div class="community__bk-img community__bk01">
                 <img src="img/bk-typo.png" alt="배경 타이포">
               </div>
-              <div class="community__bk-img">
+              <div class="community__bk-img community__bk02">
                 <img src="img/bk-typo2.png" alt="배경 타이포">
               </div>
-              <div class="community__bk-img">
+              <div class="community__bk-img community__bk03">
                 <img src="img/bk-typo.png" alt="배경 타이포">
               </div>
             </div>
@@ -345,7 +359,7 @@
             </div>
             <div class="community__center">
               <p class="community__guide">
-                <p class="community__line"><span class="hide">중앙가이드라인</span></p>
+                <span class="hide">중앙가이드라인</span>
               </p>
               <div class="community__card">
                 <a href="">

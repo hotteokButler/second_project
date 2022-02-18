@@ -1,4 +1,5 @@
-//index.html main_slide
+//index.html
+//main_slide section---------------------------------
 
 const mainSlide = $('.main-slid__img');
 const mainSlideImgs = mainSlide.find('img');
@@ -71,8 +72,7 @@ pagerFinishNum.innerText = String(mainSlideImgAndTxt.length);
 function slideTxtSwitchOption(array, index) {
   slideTitle.style.backgroundImage = array[index].titleUrl;
   slideDesc.innerText = array[index].text;
-
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1200) {
     let pcPagerWidth = pcPager.getBoundingClientRect().width;
 
     pagerStartNum.innerText = array[index].id;
@@ -83,7 +83,6 @@ function slideTxtSwitchOption(array, index) {
     moPagerBar.style.width = `${(moPagerWidth / array.length) * (index + 1)}px`;
   }
 }
-
 function changeSlideTxt() {
   for (const item of activeSlides) {
     let currentSlideImg = item.getAttribute('src');
@@ -122,10 +121,68 @@ let config = {
   attributeOldValue: false, // 타겟의 속성 변경 전 속성 기록
   characterDataOldValue: false, // 타겟의 데이터 변경 전 데이터 기록
 };
+
 //감지시작
+
 observer.observe(target, config);
 
-// section info
+//info section----------------------------
+
+// info product 슬라이드에 맞게 text 변경 - 더블클릭해야지 가능 추후 수정하기
+// const productInfoBox = document.querySelector('#dyson-product-v11Complete');
+// const productInfoTitle = productInfoBox.querySelector('.info-card__title');
+// const productInfoDesc = productInfoBox.querySelector('.info-card__desc');
+
+// const infoPcPagerBox = document.querySelector('.info-card__pc-pager');
+
+// let infoTxtList = [
+//   {
+//     title: `당신의 상쾌한 <span>LIFE</span>`,
+//     desc: '다이슨의 강력하고 가벼운 무선 청소기 V12 디텍트 슬림을 만나보세요',
+//     tagUrl: 'url(../img/v11-com-in-mainbn.png)',
+//   },
+
+//   {
+//     title: `쾌적한 수면 <span>LIFE</span>`,
+//     desc: '다이슨은 쌀쌀한 저녁 따뜻한 쾌적한 온풍으로 편안한 숙면을 도와드립니다.',
+//     tagUrl: 'url(../img/dyson-fromaldehyde-hot-cool-n.png)',
+//   },
+//   {
+//     title: `<span>EASY DYSON LIFE</span>`,
+//     desc: '완벽한 바닥 청소를 위한 설계 지금 바로 경험해보세요.',
+//     tagUrl: 'url(../img/dyson-cyclone-v10-n.png)',
+//   },
+// ];
+
+// function replaceInfoTxt(title, desc, tagUrl, targetTag) {
+//   productInfoTitle.innerHTML = title;
+//   productInfoDesc.innerText = desc;
+//   targetTag.style.backgroundImage = tagUrl;
+// }
+
+// function replaceInfoBoxTxt(event) {
+//   let pagerTarget = event.target;
+//   const slideTargetBox = event.currentTarget;
+//   let slideTarget = slideTargetBox.querySelector('.slick-track figure[tabindex="0"] a[tabindex="0"]');
+//   let slideTargetTag = slideTarget.querySelector('.info-card__tag');
+//   if (pagerTarget.nodeName != 'BUTTON') {
+//     return;
+//   } else if (pagerTarget.nodeName === 'BUTTON' || pagerTarget.nodeName === 'A') {
+//     switch (slideTarget.id) {
+//       case 'infoSlide01':
+//         replaceInfoTxt(infoTxtList[0].title, infoTxtList[0].desc, infoTxtList[0].tagUrl, slideTargetTag);
+//         break;
+//       case 'infoSlide02':
+//         replaceInfoTxt(infoTxtList[1].title, infoTxtList[1].desc, infoTxtList[1].tagUrl, slideTargetTag);
+//         break;
+//       case 'infoSlide03':
+//         replaceInfoTxt(infoTxtList[2].title, infoTxtList[2].desc, infoTxtList[2].tagUrl, slideTargetTag);
+//         break;
+//     }
+//   }
+// }
+
+// section info link 연결
 
 const v11Complete = $('#dyson-product-v11Complete');
 const v11CompleteHref = v11Complete.find('.info-card__btn-gray');
@@ -134,5 +191,81 @@ v11CompleteHref.on({
   click: function () {
     $(location).attr('href', '../v11_complete.html');
     return false;
+  },
+});
+
+const infoProduct = $('.info-card__productImgWrap');
+
+infoProduct.slick({
+  arrows: false,
+  dots: true,
+  appendDots: '.info-card__pc-pager',
+  infinite: false,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear',
+});
+
+//community section -------------------------------------------
+
+let infoCardLi = $('.info').children('.info-card');
+
+$(window).on({
+  scroll: function () {
+    // info card
+    for (let i = 1; i < infoCardLi.length; i++) {
+      infoCardLi.eq(i).css({
+        transform: `translateY(60%)`,
+      });
+    }
+
+    let scrollY = $(this).scrollTop();
+    let scrollX = $(this).innerWidth();
+    let firstCardY = infoCardLi.eq(0).offset().top;
+
+    if (scrollY >= firstCardY) {
+      infoCardLi.eq(1).css({
+        transform: 'translateY(0%)',
+        transition: '1s transform',
+      });
+      infoCardLi.eq(2).css({
+        transform: 'translateY(0%)',
+        transition: '3s transform',
+      });
+      infoCardLi.eq(3).css({
+        transform: 'translateY(0%)',
+        transition: '5s transform',
+      });
+    }
+
+    // community 섹션
+    const communityBox = $('.community');
+    const communityBar = $('.community__guide');
+    const communityCenterBox = $('.community__center > .community__card');
+    const communityTypoList = $('.community__bk-typo').children('.community__bk-img');
+    let lastCardY = infoCardLi.eq(3).offset().top;
+    let communityY = communityBox.offset().top;
+    let newOffsetY = scrollY - communityY + 500;
+
+    if (scrollY >= lastCardY && scrollX > 1200) {
+      communityBar.animate(
+        {
+          height: '280px',
+        },
+        1300
+      );
+      communityCenterBox.css({
+        transform: 'translateY(55%)',
+        transition: '1300ms transform ease-in-out',
+      });
+      communityTypoList.not(':even').css({
+        right: `-${newOffsetY}px`,
+        transition: '1s right',
+      });
+      communityTypoList.not(':odd').css({
+        left: `-${newOffsetY}px`,
+        transition: '1s left',
+      });
+    }
   },
 });
