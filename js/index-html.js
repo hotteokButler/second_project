@@ -167,7 +167,7 @@ observer.observe(target, config);
 //   let slideTargetTag = slideTarget.querySelector('.info-card__tag');
 //   if (pagerTarget.nodeName != 'BUTTON') {
 //     return;
-//   } else if (pagerTarget.nodeName === 'BUTTON' || pagerTarget.nodeName === 'A') {
+//   } else if (pagerTarget.nodeName === 'BUTTON') {
 //     switch (slideTarget.id) {
 //       case 'infoSlide01':
 //         replaceInfoTxt(infoTxtList[0].title, infoTxtList[0].desc, infoTxtList[0].tagUrl, slideTargetTag);
@@ -181,6 +181,8 @@ observer.observe(target, config);
 //     }
 //   }
 // }
+
+// productInfoBox.addEventListener('click', replaceInfoBoxTxt);
 
 // section info link 연결
 
@@ -209,19 +211,95 @@ infoProduct.slick({
 //community section -------------------------------------------
 
 let infoCardLi = $('.info').children('.info-card');
+const communityBox = $('.community');
+const communityInner = $('.community__inner');
+const communityBar = $('.community__guide');
+let allCommunityCards = communityInner.find('.community__card');
+const communityCenterBox = $('.community__center > .community__card');
+const communityTypoList = $('.community__bk-typo').children('.community__bk-img');
+
+// community btn event 모바일. 테블릿 cardwidth 310px
+const communityBtns = $('.community__btn');
+const communityPrevBtn = $('.community__perv');
+const communityNextBtn = $('.community__next');
+let communityLeftBox = $('.community__left');
+let communityMiddleBox = $('.community__center');
+let communityRightBox = $('.community__right');
+let innerBoxLength = communityLeftBox.innerWidth() + communityMiddleBox.innerWidth() + communityRightBox.innerWidth();
+let communityBoxLength = communityInner.innerWidth();
+let count = 1;
+let moveOffset;
+let moving = false;
+
+communityNextBtn.on({
+  click: function () {
+    let move = count * 310;
+
+    innerBoxLength = communityLeftBox.innerWidth() + communityMiddleBox.innerWidth() + communityRightBox.innerWidth();
+    communityBoxLength = communityInner.innerWidth();
+
+    let lengthGap = innerBoxLength - move + 150;
+    if (lengthGap > communityBoxLength) {
+      communityPrevBtn.addClass('community__btn-active');
+      communityInner.css({
+        transform: `translateX(-${move}px)`,
+        transition: '1s transform',
+      });
+      count++;
+      moveOffset = move;
+      moving = true;
+    } else {
+      communityNextBtn.removeClass('community__btn-active');
+      count = 1;
+      moving = false;
+    }
+  },
+});
+communityPrevBtn.on({
+  click: function () {
+    let move = moveOffset - 310 * count;
+    moving = true;
+
+    if (move > -310) {
+      communityNextBtn.addClass('community__btn-active');
+
+      communityInner.css({
+        transform: `translateX(-${move}px)`,
+        transition: '1s transform',
+      });
+      count++;
+      moving = true;
+    } else if (move === -310) {
+      communityPrevBtn.removeClass('community__btn-active');
+      communityNextBtn.addClass('community__btn-active');
+      count = 1;
+      moving = false;
+    }
+  },
+});
+
+if (innerBoxLength > communityBoxLength) {
+  communityNextBtn.addClass('community__btn-active');
+} else {
+  communityNextBtn.removeClass('community__btn-active');
+  communityPrevBtn.removeClass('community__btn-active');
+}
 
 $(window).on({
   scroll: function () {
     // info card
-    for (let i = 1; i < infoCardLi.length; i++) {
-      infoCardLi.eq(i).css({
-        transform: `translateY(60%)`,
-      });
-    }
 
     let scrollY = $(this).scrollTop();
-    let scrollX = $(this).innerWidth();
+    let windowX = $(this).innerWidth();
     let firstCardY = infoCardLi.eq(0).offset().top;
+
+    if (windowX > 768) {
+      for (let i = 1; i < infoCardLi.length; i++) {
+        infoCardLi.eq(i).css({
+          transform: `translateY(60%)`,
+        });
+      }
+    }
 
     if (scrollY >= firstCardY) {
       infoCardLi.eq(1).css({
@@ -234,20 +312,16 @@ $(window).on({
       });
       infoCardLi.eq(3).css({
         transform: 'translateY(0%)',
-        transition: '5s transform',
+        transition: '4s transform',
       });
     }
 
-    // community 섹션
-    const communityBox = $('.community');
-    const communityBar = $('.community__guide');
-    const communityCenterBox = $('.community__center > .community__card');
-    const communityTypoList = $('.community__bk-typo').children('.community__bk-img');
+    // community 섹션 - pc
     let lastCardY = infoCardLi.eq(3).offset().top;
     let communityY = communityBox.offset().top;
     let newOffsetY = scrollY - communityY + 500;
 
-    if (scrollY >= lastCardY && scrollX > 1200) {
+    if (scrollY >= lastCardY && windowX > 1200) {
       communityBar.animate(
         {
           height: '280px',
@@ -265,6 +339,20 @@ $(window).on({
       communityTypoList.not(':odd').css({
         left: `-${newOffsetY}px`,
         transition: '1s left',
+      });
+    }
+  },
+  resize: function () {
+    let windowX = $(this).innerWidth();
+
+    if (windowX < 1200) {
+      communityCenterBox.css({
+        transform: 'translate(0px, 0px)',
+      });
+    } else if (windowX > 1200) {
+      communityInner.css({
+        transform: `translateX(0px)`,
+        transition: '1s transform',
       });
     }
   },

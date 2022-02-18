@@ -253,8 +253,7 @@
 .main-slid__pc-pager {
   display: none;
 }
-.main-slid__pager,
-.info-slid__pager {
+.main-slid__pager {
   position: relative;
   max-width: 370px;
   width: 90%;
@@ -262,8 +261,7 @@
   background-color: #c0c0c0;
   margin: auto;
 }
-.main-slide__pager--move,
-.info-slide__pager--move {
+.main-slide__pager--move {
   position: absolute;
   top: 0;
   left: 0;
@@ -423,8 +421,10 @@
 }
 /* 본문6 community */
 .community {
+  position: relative;
   background-color: #f7f7f7;
   margin-bottom: 70px;
+  padding: 10px 15px 15px;
 }
 .community__main-title {
   padding-top: 40px;
@@ -439,7 +439,7 @@
   display: flex;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px 60px 15px;
+  padding: 0 0 40px 0;
   overflow: none;
 }
 .community__left,
@@ -509,8 +509,8 @@
 }
 .community__btn {
   position: absolute;
-  bottom: 15px;
-  left: 25px;
+  bottom: 25px;
+  left: 20px;
   display: flex;
 }
 .community__btn p {
@@ -526,7 +526,7 @@
   transform: 200ms;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
-p.community__btn-active {
+.community__btn p.community__btn-active {
   background-color: var(--main-color-green);
 }
 .community__perv {
