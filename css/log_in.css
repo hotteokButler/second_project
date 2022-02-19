@@ -42,7 +42,7 @@
   flex-direction: column;
   align-items: center;
 }
-.logIn-input__box input[type='text'],
+.logIn-input__box input[type='email'],
 .logIn-input__box input[type='password'] {
   width: 100%;
   margin-bottom: 10px;
@@ -50,7 +50,7 @@
   border-bottom: 1px solid #e9e9e9;
   font-size: 13px;
 }
-.logIn-input__box input[type='text']::placeholder,
+.logIn-input__box input[type='email']::placeholder,
 .logIn-input__box input[type='password']::placeholder {
   color: #c2c2c2;
   font-size: 14px;

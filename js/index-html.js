@@ -225,20 +225,69 @@ const communityNextBtn = $('.community__next');
 let communityLeftBox = $('.community__left');
 let communityMiddleBox = $('.community__center');
 let communityRightBox = $('.community__right');
-let innerBoxLength = communityLeftBox.innerWidth() + communityMiddleBox.innerWidth() + communityRightBox.innerWidth();
-let communityBoxLength = communityInner.innerWidth();
+
+// 모바일  community 슬라이드 버튼 코드 개선 후,
+
 let count = 1;
-let moveOffset;
-let moving = false;
+let moveOffset = 0;
+let communityBoxLength = communityBox.innerWidth();
+let innerBoxLength = allCommunityCards.length * 310;
 
 communityNextBtn.on({
+  click: function (e) {
+    if (communityBoxLength < innerBoxLength + moveOffset) {
+      let move = moveOffset - 310;
+      communityInner.css({
+        transform: `translateX(${move}px)`,
+        transition: '1s transform',
+      });
+      moveOffset = move;
+      if (communityBoxLength > innerBoxLength + moveOffset) {
+        communityNextBtn.removeClass('community__btn-active');
+      }
+      communityPrevBtn.addClass('community__btn-active');
+    }
+  },
+});
+
+communityPrevBtn.on({
   click: function () {
+    if (moveOffset < 0) {
+      let movePrev = moveOffset + 310;
+
+      communityInner.css({
+        transform: `translateX(${movePrev}px)`,
+        transition: '1s transform',
+      });
+      moveOffset = movePrev;
+      if (communityBoxLength < innerBoxLength + moveOffset) {
+        communityNextBtn.addClass('community__btn-active');
+      }
+    } else if (moveOffset === 0) {
+      communityPrevBtn.removeClass('community__btn-active');
+    }
+  },
+});
+
+if (innerBoxLength > communityBoxLength) {
+  communityNextBtn.addClass('community__btn-active');
+} else {
+  communityNextBtn.removeClass('community__btn-active');
+  communityPrevBtn.removeClass('community__btn-active');
+}
+
+// 모바일  community 슬라이드 버튼 코드 개선전,
+
+/* 
+communityNextBtn.on({
+  click: function (e) {
     let move = count * 310;
 
     innerBoxLength = communityLeftBox.innerWidth() + communityMiddleBox.innerWidth() + communityRightBox.innerWidth();
     communityBoxLength = communityInner.innerWidth();
 
-    let lengthGap = innerBoxLength - move + 150;
+    let lengthGap = innerBoxLength - move;
+
     if (lengthGap > communityBoxLength) {
       communityPrevBtn.addClass('community__btn-active');
       communityInner.css({
@@ -255,6 +304,7 @@ communityNextBtn.on({
     }
   },
 });
+
 communityPrevBtn.on({
   click: function () {
     let move = moveOffset - 310 * count;
@@ -276,14 +326,9 @@ communityPrevBtn.on({
       moving = false;
     }
   },
-});
+}); */
 
-if (innerBoxLength > communityBoxLength) {
-  communityNextBtn.addClass('community__btn-active');
-} else {
-  communityNextBtn.removeClass('community__btn-active');
-  communityPrevBtn.removeClass('community__btn-active');
-}
+// 스크롤 이벤트
 
 $(window).on({
   scroll: function () {
@@ -348,7 +393,10 @@ $(window).on({
     if (windowX < 1200) {
       communityCenterBox.css({
         transform: 'translate(0px, 0px)',
+        transition: '0s transform',
       });
+      communityNextBtn.off('click');
+      communityPrevBtn.off('click');
     } else if (windowX > 1200) {
       communityInner.css({
         transform: `translateX(0px)`,

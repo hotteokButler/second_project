@@ -622,29 +622,10 @@
     background-color: #79b927;
   }
   .info-card__pc-pager {
-    display: flex;
-    justify-content: center;
     width: 70px;
     margin: 0 auto;
   }
-  .info-card__pc-pager .slick-dots {
-    display: flex;
-    justify-content: space-between;
-    width: 70px;
-    margin: 0 auto;
-  }
-  .info-card__pc-pager button {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #efefef;
-    text-indent: -99999px;
-    cursor: pointer;
-  }
-  .slick-active button {
-    background-color: #79b927;
-  }
+
   /* pc - community */
   .community {
     position: relative;
