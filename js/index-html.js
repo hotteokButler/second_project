@@ -276,9 +276,8 @@ if (innerBoxLength > communityBoxLength) {
   communityPrevBtn.removeClass('community__btn-active');
 }
 
-// 모바일  community 슬라이드 버튼 코드 개선전,
+/* 모바일  community 슬라이드 버튼 코드 개선전,
 
-/* 
 communityNextBtn.on({
   click: function (e) {
     let move = count * 310;
@@ -367,12 +366,9 @@ $(window).on({
     let newOffsetY = scrollY - communityY + 500;
 
     if (scrollY >= lastCardY && windowX > 1200) {
-      communityBar.animate(
-        {
-          height: '280px',
-        },
-        1300
-      );
+      communityBar.animate({
+        height: '280px',
+      });
       communityCenterBox.css({
         transform: 'translateY(55%)',
         transition: '1300ms transform ease-in-out',
