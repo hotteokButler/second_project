@@ -125,3 +125,61 @@ productIcons.addEventListener('click', (event) => {
     targetIcon.classList.toggle('product-info__mo-cart--clicked');
   }
 });
+
+// other product
+
+const otherProductLi = $('.other-product__list');
+const otherPrevBtn = $('.other-product .community__btn .community__perv');
+const otherNextBtn = $('.other-product .community__btn .community__next');
+
+otherProductLi.slick({
+  prevArrow: otherPrevBtn,
+  nextArrow: otherNextBtn,
+  infinite: false,
+  variableWidth: true,
+  mobileFirst: true,
+  dots: false,
+  arrows: true,
+  speed: 1000,
+});
+
+otherNextBtn.on({
+  click: function () {
+    let isAreaDisabled = otherPrevBtn.attr('aria-disabled');
+    if (isAreaDisabled === 'false') {
+      otherPrevBtn.css({
+        backgroundColor: 'var(--main-color-green)',
+      });
+    } else {
+      otherPrevBtn.css({
+        backgroundColor: '#ccc',
+      });
+    }
+  },
+});
+otherPrevBtn.on({
+  click: function () {
+    let isAreaDisabled = $(this).attr('aria-disabled');
+    if (isAreaDisabled === 'true') {
+      otherPrevBtn.css({
+        backgroundColor: '#ccc',
+      });
+    }
+  },
+});
+
+// productNotice
+
+let productNoticeLi = $('.product-notice__list li');
+
+productNoticeLi.on({
+  click: function () {
+    let desc = $(this).find('div');
+
+    if (desc.css('display') === 'none') {
+      desc.slideDown(500);
+    } else if (desc.css('display') === 'block') {
+      desc.slideUp(500);
+    }
+  },
+});

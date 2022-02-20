@@ -37,6 +37,7 @@
   height: 26px;
   margin-left: 15px;
   background-image: url(../img/dyson-logo-w1.png);
+  background-repeat: no-repeat;
   background-size: 100% auto;
   text-indent: -99999px;
 }

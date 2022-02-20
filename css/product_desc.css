@@ -285,28 +285,34 @@
   font-weight: 500;
 }
 .other-product__list {
-  display: flex;
   overflow: none;
 }
 .other-product__list li {
   margin: 0 15px 0 0;
 }
-.other-product__list a {
-  display: block;
-  color: #222;
+
+.other-product__list li.slick-slide {
+  width: 200px;
+  height: 323px;
   border: 1px solid #efefef;
 }
-.other-product__list figure {
-  width: 200px;
+li.slick-slide > a {
+  display: block;
+  color: #222;
+}
+li.slick-slide > a > figure {
+  width: 100%;
   height: 250px;
-  padding: 0 20px;
   background: linear-gradient(to top, #efefef 0.5%, #ffff);
   text-align: center;
+  overflow: hidden;
 }
-.other-product__list figure img {
+li.slick-slide > a > figure > img {
   width: auto;
+  margin: 0 auto;
   height: 100%;
 }
+
 .other-product__desc {
   padding: 18px 15px 15px 15px;
 }
@@ -710,16 +716,22 @@ button.product-desc__btnList--active::after {
     margin: 0 0 30px 0;
     font-size: 30px;
   }
-  .other-product__list figure {
-    width: 230px;
-    height: 280px;
-    padding: 0 25px;
-  }
+
   .other-product__desc {
     padding: 20px 18px 18px 18px;
     font-size: 15px;
     line-height: 1.3em;
   }
+  .other-product__list li.slick-slide {
+    width: 230px;
+    height: 356px;
+  }
+  li.slick-slide > a > figure {
+    width: 100%;
+    height: 280px;
+    padding: 0 25px;
+  }
+
   /* 테블릿 본문3 product-desc */
   .product-desc__btnList {
     margin: 0 35px;
@@ -1095,7 +1107,6 @@ button.product-desc__btnList--active::after {
   .product-info__pc-function {
     padding: 30px;
     border-radius: 4px;
-    cursor: pointer;
   }
   .product-info__pc-function .product-info__pc-funTitle {
     font-size: 24px;
@@ -1153,17 +1164,17 @@ button.product-desc__btnList--active::after {
     margin: 0 0 60px 0;
     font-size: 40px;
   }
-  .other-product__list {
-    overflow: hidden;
+  .other-product__list li.slick-slide {
+    width: 228px;
+    height: 392px;
+    margin: 0 25px 0 0;
   }
-  .other-product__list figure {
-    width: 250px;
+  li.slick-slide > a > figure {
+    width: 100%;
     height: 300px;
     padding: 0 25px;
   }
-  .other-product__list li {
-    margin: 0 25px 0 0;
-  }
+
   .other-product__desc {
     font-size: 18px;
     line-height: 1.5em;
