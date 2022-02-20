@@ -102,7 +102,6 @@
     display: none;
     height: 0;
   }
-
   100% {
     display: block;
     height: 100vh;
