@@ -78,6 +78,7 @@ const productCount = document.querySelector('.product-info__mo-countProduct');
 const productAllPrice = document.querySelector('.product-info__mo-allPrice span');
 const productDataId = document.getElementById('productCount');
 let productNowNum = productDataId.dataset.productNow;
+
 const v11CompletePrice = 1290000;
 
 function minusProducts(event) {
@@ -167,6 +168,35 @@ otherPrevBtn.on({
     }
   },
 });
+
+// desc sub menus
+
+const productDescBtns = document.querySelector('.product-desc__btnList');
+const BTN_ACTIVE_CLASS = 'product-desc__btnList--active';
+const productDetail = document.querySelector('.product-detailFunction');
+const productReview = document.querySelector('.product-reviews h2');
+
+function handleProductDesc(event) {
+  let target = event.target;
+
+  if (target.nodeName !== 'BUTTON') {
+    return;
+  } else if (target.className === 'product-desc__spacific' || target.classNane === `product-desc__spacific product-desc__btnList--active`) {
+    productDetail.scrollIntoView({
+      block: 'center',
+    });
+    target.classList.toggle(BTN_ACTIVE_CLASS);
+  } else if (target.className === 'product-desc__reviews' || target.className === 'product-desc__reviews product-desc__btnList--active') {
+    productReview.scrollIntoView({
+      block: 'start',
+    });
+    target.classList.toggle(BTN_ACTIVE_CLASS);
+  } else if (target.className === 'product-desc__support') {
+    window.location.href = '../support-page.html';
+  }
+}
+
+productDescBtns.addEventListener('click', handleProductDesc);
 
 // productNotice
 
