@@ -43,25 +43,25 @@ const moPagerBar = document.querySelector('.main-slide__pager--move');
 let mainSlideImgAndTxt = [
   {
     id: '1',
-    titleUrl: 'url(../img/purifier-humidify-cool-n.png)',
+    titleUrl: 'url(img/purifier-humidify-cool-n.png)',
     text: '포름알데히드를 지속적으로 감지하고 파괴 초미세먼지를 99.5% 제거',
     slideSrc: 'img/main-bn01.jpg',
   },
   {
     id: '2',
-    titleUrl: 'url(../img/dyson-corrale-ms02.png)',
+    titleUrl: 'url(img/dyson-corrale-ms02.png)',
     text: '지능형 열제어 시스템으로 스마트하게 손상은 반으로 줄이고 정교한 스타일링을 연출해보세요',
     slideSrc: 'img/main-bn02.jpg',
   },
   {
     id: '3',
-    titleUrl: 'url(../img/dyson-supersonic_ms03.png)',
+    titleUrl: 'url(img/dyson-supersonic_ms03.png)',
     text: '멀티플라이어 기술로 만들어낸 집중된 바람으로 빠른 건조와 정교한 스타일링을 경험하세요',
     slideSrc: 'img/main-bn03.jpg',
   },
   {
     id: '4',
-    titleUrl: 'url(../img/lightcycle-morph-ms04.png)',
+    titleUrl: 'url(img/lightcycle-morph-ms04.png)',
     text: '스마트한 밝기 조절 시스템과 적은 블루라이트와 편안함을 선사하는 조명의 혁신을 경험하세요',
     slideSrc: 'img/main-bn04.jpg',
   },
