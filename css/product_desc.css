@@ -577,9 +577,10 @@ button.product-desc__btnList--active::after {
 }
 .product-notice__list > li > p {
   padding: 25px 0 0 0;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   line-height: 1.3em;
+  letter-spacing: -0.9px;
 }
 .product-notice__list > li:not(:last-child) {
   border-bottom: 1px solid #ddd;
@@ -597,6 +598,7 @@ button.product-desc__btnList--active::after {
   padding: 5px 0 5px 25px;
   list-style-type: disc;
   list-style-position: inside;
+  font-size: 13px;
   line-height: 1.5em;
   text-indent: -17px;
 }
@@ -723,7 +725,7 @@ button.product-desc__btnList--active::after {
     line-height: 1.3em;
   }
   .other-product__list li.slick-slide {
-    width: 230px;
+    width: 220px;
     height: 356px;
   }
   li.slick-slide > a > figure {
