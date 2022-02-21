@@ -55,7 +55,7 @@ let mainSlideImgAndTxt = [
   },
   {
     id: '3',
-    titleUrl: 'url(img/dyson-supersonic_ms03.png)',
+    titleUrl: 'url(./img/dyson-supersonic_ms03.png)',
     text: '멀티플라이어 기술로 만들어낸 집중된 바람으로 빠른 건조와 정교한 스타일링을 경험하세요',
     slideSrc: 'img/main-bn03.jpg',
   },
