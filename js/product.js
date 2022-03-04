@@ -192,7 +192,7 @@ function handleProductDesc(event) {
     });
     target.classList.toggle(BTN_ACTIVE_CLASS);
   } else if (target.className === 'product-desc__support') {
-    window.location.href = '../support-page.html';
+    window.location.href = './support-page.html';
   }
 }
 
