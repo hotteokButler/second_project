@@ -214,7 +214,7 @@ input[type='checkbox']:checked + label:before {
   .logIn-input__find-box {
     margin: 0 30px 110px 30px;
   }
-  .logIn-input__box input[type='text'],
+  .logIn-input__box input[type='email'],
   .logIn-input__box input[type='password'] {
     padding: 40px 20px 8px 8px;
     font-size: 15px;
@@ -249,9 +249,9 @@ input[type='checkbox']:checked + label:before {
   .logIn-input__mk-new {
     margin-bottom: 50px;
   }
-  .logIn-input__box input[type='text'],
+  .logIn-input__box input[type='email'],
   .logIn-input__box input[type='password'],
-  .logIn-input__box input[type='text']::placeholder,
+  .logIn-input__box input[type='email']::placeholder,
   .logIn-input__box input[type='password']::placeholder {
     font-size: 17px;
   }

@@ -391,13 +391,13 @@ $(window).on({
         transform: 'translate(0px, 0px)',
         transition: '0s transform',
       });
-      communityNextBtn.off('click');
-      communityPrevBtn.off('click');
     } else if (windowX > 1200) {
       communityInner.css({
         transform: `translateX(0px)`,
         transition: '1s transform',
       });
+      communityNextBtn.off('click');
+      communityPrevBtn.off('click');
     }
   },
 });
