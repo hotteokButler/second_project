@@ -865,6 +865,10 @@ button.product-desc__btnList--active::after {
   .product-notice__descMore {
     font-size: 14px;
   }
+  .product-notice__sub a,
+  .notice__mail {
+    font-size: 17px;
+  }
 }
 /* 테블릿 width: 768px 마지막*/
 
@@ -1373,8 +1377,9 @@ button.product-desc__btnList--active::after {
   .product-notice__descMore {
     font-size: 15px;
   }
-  .notice__mail {
-    font-size: 18px;
+  .notice__mail,
+  .product-notice__sub a {
+    font-size: 19px;
   }
 }
 /* pc width: 1200px 마지막*/
